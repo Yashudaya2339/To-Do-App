@@ -1,0 +1,477 @@
+/* ========================================
+   COMPONENTS — Buttons, Cards, Forms, Badges
+   ======================================== */
+
+/* ---- Buttons ---- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+    white-space: nowrap;
+    user-select: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-400), var(--primary-600));
+    color: #fff;
+    box-shadow: 0 2px 8px hsla(239, 84%, 67%, 0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px hsla(239, 84%, 67%, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-muted);
+    padding: var(--space-1) var(--space-2);
+}
+
+.btn-ghost:hover {
+    background: var(--border);
+    color: var(--text);
+}
+
+.btn-danger {
+    background: transparent;
+    color: var(--danger);
+    padding: var(--space-1) var(--space-2);
+}
+
+.btn-danger:hover {
+    background: hsla(0, 72%, 56%, 0.1);
+}
+
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-lg {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+    border-radius: var(--radius-lg);
+}
+
+/* ---- Task Card ---- */
+.task-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    transition: all var(--duration-normal) var(--ease-out);
+    position: relative;
+    animation: slideUp var(--duration-normal) var(--ease-out);
+}
+
+.task-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-100);
+}
+
+.task-card.completed .task-card__title {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task-card.completed .task-card__desc {
+    opacity: 0.4;
+}
+
+.task-card__checkbox {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--text-muted);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration-fast) var(--ease-out);
+    background: transparent;
+    padding: 0;
+    margin-top: 2px;
+}
+
+.task-card__checkbox:hover {
+    border-color: var(--primary-400);
+}
+
+.task-card__checkbox.checked {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.task-card__checkbox.checked svg {
+    opacity: 1;
+}
+
+.task-card__checkbox svg {
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+    transition: opacity var(--duration-fast);
+}
+
+.task-card__body {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+    flex-wrap: wrap;
+}
+
+.task-card__title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    transition: all var(--duration-fast);
+}
+
+.task-card__desc {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-2);
+    transition: opacity var(--duration-fast);
+}
+
+.task-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.task-card__date {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.task-card__date.overdue {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.task-card__actions {
+    display: flex;
+    gap: var(--space-1);
+    opacity: 0;
+    transition: opacity var(--duration-fast);
+    flex-shrink: 0;
+}
+
+.task-card:hover .task-card__actions {
+    opacity: 1;
+}
+
+/* ---- Priority Badge ---- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-high {
+    background: hsla(0, 72%, 56%, 0.12);
+    color: var(--danger);
+}
+
+.badge-medium {
+    background: hsla(38, 92%, 55%, 0.12);
+    color: var(--warning);
+}
+
+.badge-low {
+    background: hsla(152, 60%, 48%, 0.12);
+    color: var(--success);
+}
+
+/* ---- Tag Chips ---- */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    font-size: var(--text-xs);
+    font-weight: 500;
+    border-radius: var(--radius-full);
+    background: var(--primary-50);
+    color: var(--primary-600);
+}
+
+/* ---- Form Inputs ---- */
+.form-group {
+    margin-bottom: var(--space-4);
+}
+
+.form-label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+    color: var(--text);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    transition: all var(--duration-fast) var(--ease-out);
+}
+
+.form-input:hover {
+    border-color: var(--primary-200);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 3px hsla(239, 84%, 67%, 0.15);
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+}
+
+/* ---- Stat Card ---- */
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    text-align: center;
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.stat-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-card__value {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--primary-400);
+    line-height: 1;
+}
+
+.stat-card__label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: var(--space-1);
+}
+
+/* ---- Filter Tabs ---- */
+.filter-tabs {
+    display: flex;
+    gap: var(--space-1);
+    background: var(--bg);
+    padding: 3px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.filter-tab {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all var(--duration-fast) var(--ease-out);
+    white-space: nowrap;
+}
+
+.filter-tab:hover {
+    color: var(--text);
+}
+
+.filter-tab.active {
+    background: var(--bg-card);
+    color: var(--primary-400);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+}
+
+/* ---- Search Input ---- */
+.search-wrap {
+    position: relative;
+}
+
+.search-wrap svg {
+    position: absolute;
+    left: var(--space-3);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    padding: var(--space-2) var(--space-3) var(--space-2) var(--space-10);
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    transition: all var(--duration-fast) var(--ease-out);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 3px hsla(239, 84%, 67%, 0.15);
+}
+
+/* ---- Dialog / Modal ---- */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn var(--duration-fast) var(--ease-out);
+}
+
+.modal {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    width: 90%;
+    max-width: 440px;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp var(--duration-normal) var(--ease-out);
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
+}
+
+.modal__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+}
+
+/* ---- Empty State ---- */
+.empty-state {
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+    color: var(--text-muted);
+}
+
+.empty-state__icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+    opacity: 0.4;
+}
+
+.empty-state__text {
+    font-size: var(--text-lg);
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+}
+
+.empty-state__sub {
+    font-size: var(--text-sm);
+}
+
+/* ---- Drag & Drop ---- */
+.task-card.dragging {
+    opacity: 0.4;
+    transform: scale(0.98);
+}
+
+.task-card.drag-over {
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 2px hsla(239, 84%, 67%, 0.2);
+}
+
+/* ---- Theme Toggle ---- */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--border);
+    background: var(--bg-card);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration-fast) var(--ease-out);
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-400);
+    box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}

@@ -1,0 +1,141 @@
+/* ========================================
+   LAYOUT — App Shell, Grid, Responsive
+   ======================================== */
+
+.app {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: var(--space-4);
+    min-height: 100vh;
+}
+
+/* ---- Gradient Accent Bar ---- */
+.app::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-400), var(--accent-500), var(--primary-400));
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+    z-index: var(--z-toast);
+}
+
+/* ---- Header ---- */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-6) 0 var(--space-4);
+}
+
+.app-header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.app-header__logo {
+    width: 32px;
+    height: 32px;
+}
+
+.app-header__title {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-400), var(--accent-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.app-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* ---- Stats Grid ---- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+}
+
+/* ---- Toolbar ---- */
+.toolbar {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.toolbar__search {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* ---- Task List ---- */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+/* ---- Add Task Bar ---- */
+.add-task-bar {
+    margin-bottom: var(--space-5);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+    .app {
+        padding: var(--space-3);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar__search {
+        width: 100%;
+    }
+
+    .filter-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .task-card__actions {
+        opacity: 1;
+    }
+
+    .modal {
+        width: 95%;
+        padding: var(--space-4);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 769px) {
+    .app {
+        padding: var(--space-6) var(--space-4);
+    }
+}

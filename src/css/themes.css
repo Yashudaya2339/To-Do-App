@@ -1,0 +1,67 @@
+/* ========================================
+   THEMES — Dark Mode Overrides
+   ======================================== */
+
+[data-theme="dark"] {
+    --bg: #0f0f1a;
+    --bg-card: rgba(30, 30, 50, 0.8);
+    --bg-elevated: rgba(30, 30, 50, 0.9);
+    --text: #e8e8f0;
+    --text-muted: #8888a0;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+    color-scheme: dark;
+}
+
+[data-theme="dark"] .task-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .stat-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .modal {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .search-input {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .filter-tabs {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .filter-tab.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .tag {
+    background: hsla(239, 84%, 67%, 0.15);
+}
+
+[data-theme="dark"] ::selection {
+    background: var(--primary-600);
+    color: #fff;
+}
+
+[data-theme="dark"] .badge-high {
+    background: hsla(0, 72%, 56%, 0.18);
+}
+
+[data-theme="dark"] .badge-medium {
+    background: hsla(38, 92%, 55%, 0.18);
+}
+
+[data-theme="dark"] .badge-low {
+    background: hsla(152, 60%, 48%, 0.18);
+}

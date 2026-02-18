@@ -1,0 +1,16 @@
+{
+    "name": "TaskFlow — Task Management",
+    "short_name": "TaskFlow",
+    "description": "A modern, production-grade task management app built with vanilla JavaScript",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f0f1a",
+    "theme_color": "#6366f1",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

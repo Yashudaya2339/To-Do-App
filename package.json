@@ -1,0 +1,23 @@
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "description": "A modern, production-grade task management app built with vanilla JavaScript. Features drag-and-drop, dark mode, search & filtering, priority management, and micro-animations.",
+  "author": "Yashudaya",
+  "license": "MIT",
+  "keywords": [
+    "todo",
+    "task-manager",
+    "vanilla-js",
+    "drag-and-drop",
+    "dark-mode",
+    "pwa"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.11"
+  }
+}
