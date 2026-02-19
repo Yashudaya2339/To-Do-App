@@ -1,19 +1,3 @@
-<div align="center">
-  <img src="public/favicon.svg" alt="TaskFlow Logo" width="80" />
-  <h1>TaskFlow</h1>
-  <p><strong>A modern, production-grade task management app built entirely with vanilla JavaScript.</strong></p>
-
-  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-  ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-  ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-
-  <a href="#live-demo">Live Demo</a> · <a href="#features">Features</a> · <a href="#getting-started">Getting Started</a>
-</div>
-
----
-
 ## ✨ Features
 
 | Feature | Description |
