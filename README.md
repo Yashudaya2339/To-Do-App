@@ -119,14 +119,6 @@ TaskFlow/
 
 > **Design principle:** Each module has a single responsibility. `taskManager` never touches the DOM. `renderer` never writes to storage. `app.js` is the only file that knows about all modules.
 
-## 🎯 Case Study — For Recruiters
-
-### Problem
-Most portfolio todo apps are basic CRUD tutorials that don't demonstrate real engineering skills.
-
-### My Role
-Sole developer — designed, architected, and implemented the entire application.
-
 ### Key Technical Decisions
 | Decision | Rationale |
 |----------|-----------|
@@ -148,22 +140,6 @@ Sole developer — designed, architected, and implemented the entire application
 - **100% responsive** — Mobile-first design works from 320px to 1440px+
 - **Accessible** — Full keyboard navigation with ARIA-compliant markup
 - **Performant** — Debounced writes, efficient DOM updates, reduced motion support
-
-## 📦 Deployment
-
-### Vercel
-```bash
-npm i -g vercel
-vercel --prod
-```
-
-### Netlify
-```bash
-npm i -g netlify-cli
-netlify deploy --prod --dir=dist
-```
-
-Both auto-detect Vite. Set **Build Command** to `npm run build` and **Output Directory** to `dist`.
 
 ## 📋 Feature Roadmap
 
